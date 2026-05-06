@@ -101,7 +101,6 @@ else
                                  libprotobuf-dev \
                                  libcpprest-dev \
                                  libaio-dev \
-                                 liburing-dev \
                                  libelf-dev \
                                  libgflags-dev \
                                  patchelf \
@@ -124,6 +123,7 @@ else
                                  libhwloc-dev \
                                  libxml2-dev \
                                  libcurl4-openssl-dev zlib1g-dev # aws-sdk-cpp dependencies
+    $SUDO apt-mark hold liburing2 liburing-dev
 
     # Ubuntu 22.04 specific setup
     if grep -q "Ubuntu 22.04" /etc/os-release 2>/dev/null; then
